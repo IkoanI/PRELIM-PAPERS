@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Student Health Records </title>
+	</head>
+	
+	<body>
+		<table border = "1px">
+			<tr>
+				<th> Name </th>
+				<th> Gender </th>
+				<th> Weight </th>
+				<th> Height </th>			
+			</tr>
+			{% for record in records %}
+			<tr>
+				<td>{{ record[0] }}</td>
+				<td>{{ record[1] }}</td>
+				<td>{{ record[2] }}</td>
+				<td>{{ record[3] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
