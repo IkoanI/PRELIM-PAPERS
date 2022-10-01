@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Home </title>
+	</head>
+	
+	<body>
+		<form action = "{{ url_for('dashboard') }}" method = "POST">
+			<b>NRIC:</b>
+			<br>
+			<input type = "text" name = "nric">
+			<br>
+			<br>
+			<input type = "submit">
+		</form>
+	</body>
+</html>

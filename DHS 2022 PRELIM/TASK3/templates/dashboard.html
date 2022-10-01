@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Dashboard </title>
+	</head>
+	
+	<body>
+		<p>
+			Your NDP balloting results: {{ yourResult[0] }}
+		</p>
+		<br>
+		<p>
+			Results of members in your group:
+		</p>
+		<table border = "1px">
+			<tr>
+				<th> Name </th>
+				<th> Balloting Results </th>
+			</tr>
+			{% for item in result %}
+			<tr>
+				<td> {{ item[0] }} </td>
+				<td> {{ item[1] }} </td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
