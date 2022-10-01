@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+<title> Insert </title>
+</head>
+
+<body>
+
+<form action = "{{ url_for('result') }}" method = "POST">
+<table>
+<tr>
+<td>BookID: </td>
+<td><input type = "text" name = "bookID"></td>
+</tr>
+<tr>
+<td>Title: </td>
+<td><input type = "text" name = "title"></td>
+</tr>
+<tr>
+<td>Price: </td>
+<td><input type = "text" name = "price"></td>
+</tr>
+<tr>
+<td>No. of copies: </td>
+<td><input type = "text" name = "copies"></td>
+</tr>
+<tr>
+<td><input type = "submit" value = "Submit"></td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>
