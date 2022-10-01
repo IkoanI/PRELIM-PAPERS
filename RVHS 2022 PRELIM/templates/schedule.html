@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title> Schedule Page </title>
+	</head>
+
+	<body>
+		<h1> Schedule Page </h1>
+		<p> Invigilation schedule for {{ name }}: </p>
+		<table border = "1px">
+			<tr>
+				<th> SubjectName </th>
+				<th> PaperNo </th>
+				<th> Role </th>
+				<th> Venue </th>
+				<th> Date </th>
+				<th> StartTime </th>
+				<th> EndTime </th>
+			</tr>
+			{% for item in result %}
+			<tr>
+				<td> {{ item[0] }} </td>
+				<td> {{ item[1] }} </td>
+				<td> {{ item[2] }} </td>
+				<td> {{ item[3] }} </td>
+				<td> {{ item[4] }} </td>
+				<td> {{ item[5] }} </td>
+				<td> {{ item[6] }} </td>
+			</tr>
+			{% endfor %}
+		</table>
+		<a href = '/'> Back </a>
+	</body>
+
+</html>
