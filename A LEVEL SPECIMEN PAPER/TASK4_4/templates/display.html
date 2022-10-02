@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Display </title>
+	</head>
+	
+	<body>
+		<table border = "1px">
+			<tr>
+				<th> SerialNumber </th>
+				<th> Type </th>
+			</tr>
+			{% for device in data %}
+			<tr>
+				<td> {{ device[0] }} </td>
+				<td> {{ device[1] }} </td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
