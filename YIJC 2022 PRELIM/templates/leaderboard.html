@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Leaderboard </title>
+	</head>
+	
+	<body>
+		{% if noName %}
+		<form action = "{{ url_for('leaderboard') }} " method = "POST">
+			Enter your name: <input type = "text " name = "name">
+			<br>
+			<input type = "submit">
+		</form>
+		{% endif %}
+		
+		{% if not noName %}
+		<p>
+			Total points you have accumulated: {{ studentPoint[0] }}
+		</p>
+		
+		<h1>
+			Leaderboard:
+		</h1>
+		<table border = "1px">
+			<tr>
+				<th> Name </th>
+				<th> Total Points </th>
+			</tr>
+			{% for student in leaderboard %}
+			<tr>
+				<td> {{ student[0] }} </td>
+				<td> {{ student[1] }} </td>
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+	</body>
+</html>

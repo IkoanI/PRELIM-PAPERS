@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<title> Loan </title>
+	</head>
+	
+	<body>
+		<form action = "{{ url_for('loan') }}" method = "POST">
+			<table>
+				<tr>
+					<td>
+						Name: 
+					</td>
+					
+					<td>
+						<select name = "name">
+							{% for name in names %}
+							<option value = "{{ name[0] }}"> {{ name[0] }} </option>
+							{% endfor %}
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						Equipment:
+					</td>
+					
+					<td>
+						<select name = "equipment">
+							{% for equipment in equipments %}
+							<option value = "{{ equipment[0] }}"> {{ equipment[0] }} </option>
+							{% endfor %}
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						Quantity: 
+					</td>
+					
+					<td>
+						<input type = "text", name = "qty">
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						Start Date:
+					</td>
+					
+					<td>
+						<input type = "text", name = "start">
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<input type = "submit">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
