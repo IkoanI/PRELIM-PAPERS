@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<title> View </title>
+	</head>
+	
+	<body>
+		{% if noName %}
+		<form action = "{{ url_for('view') }}", method = "POST">
+			<p>
+				<b>Name: </b><input type = "text" name = "name">
+			</p>
+			
+			<p>
+				<input type = "submit">
+			</p>
+		<form>
+		{% endif %}
+		
+		{% if not noName %}
+		<img src = "{{ url_for('get_photo', filename = filename) }}">
+		<br>
+		<a href = "/view"> View another photo </a>
+		<br>
+		<a href = "/"> Home </a>
+		{% endif %}
+	</body>
+</html>
